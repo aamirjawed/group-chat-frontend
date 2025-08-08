@@ -1298,7 +1298,6 @@
 // export default GroupChatDashboard;
 
 
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { Send, Users, AlertCircle, MessageSquare, Plus, X, Edit2, Save, Link, UserPlus, UserMinus, Shield, LogOut, Copy, Check } from 'lucide-react';
@@ -1372,7 +1371,7 @@ const GroupChatDashboard = () => {
   // API call function for main routes
   const apiFetch = async (path, options = {}) => {
     try {
-      const response = await fetch(`/api/v1${path}`, {
+      const response = await fetch(`/api/api/v1${path}`, {
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
@@ -1399,7 +1398,7 @@ const GroupChatDashboard = () => {
   // API call function for auth routes
   const authApiFetch = async (path, options = {}) => {
     try {
-      const response = await fetch(`/api${path}`, {
+      const response = await fetch(`/api/api${path}`, {
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
