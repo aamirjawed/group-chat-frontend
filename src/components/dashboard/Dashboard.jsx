@@ -1398,7 +1398,7 @@ const GroupChatDashboard = () => {
   // API call function for auth routes
   const authApiFetch = async (path, options = {}) => {
     try {
-      const response = await fetch(`/api/api${path}`, {
+      const response = await fetch(`/api${path}`, {
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
