@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, User, Lock, Mail, Check, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
+import { BASE_URL } from '../../config';
 import './login.css'
 
 const LoginPage = () => {
@@ -38,7 +39,7 @@ const LoginPage = () => {
     }
 console.log("Attempting login...");
     try {
-      const response = await fetch('/api/user/login', {
+      const response = await fetch(`${BASE_URL}/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

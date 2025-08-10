@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
+import { BASE_URL } from '../../config';
 import './SignForm.css'
 
 const SignupForm = () => {
@@ -35,7 +36,7 @@ const SignupForm = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/user/signup', {
+      const response = await fetch(`${BASE_URL}/user/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
